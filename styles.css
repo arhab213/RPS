@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.Buttons{
+    display: flex;
+    justify-content:center;
+    gap:5%;
+}
+button{
+    font-size: 5rem;
+    background:none;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(1.1);
+}
+.resultcontainer{
+    display:grid;
+    font-family: 'Open Sans', sans-serif;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+    margin:50px 20%;
+  
+}
+#gamedisplayer{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+}
+#userGame,#computerGame{
+font-size:3rem;
+}
+#result{
+    display: flex;
+    justify-content: center;
+    font-size:4rem;
+    font-family: 'Open Sans', sans-serif;
+}
