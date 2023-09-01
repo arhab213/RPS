@@ -46,10 +46,12 @@ function Computergame() {
   });
 }
 function gameplay(userChoice, computerChoice) {
+  let verif = false;
   if (userChoice === computerChoice) {
     let Tieelem = document.createElement("span");
     Tieelem.innerHTML = "Tie!";
     resultDev.appendChild(Tieelem);
+    verif = true;
   }
   if (
     (userChoice === "paper" && computerChoice == "scissors") ||
@@ -58,9 +60,18 @@ function gameplay(userChoice, computerChoice) {
   ) {
     let SpanComp = document.getElementById("ComputerScore");
     SpanComp.innerHTML = parseInt(SpanComp.innerHTML) + 1;
+    let Tieelem = document.createElement("span");
+    Tieelem.innerHTML = "You Lose!";
+    resultDev.appendChild(Tieelem);
+    verif = true;
   }
-  let SpanUser = document.getElementById("yourScore");
-  SpanUser.innerHTML = parseInt(SpanUser.innerHTML) + 1;
+  if (verif == false) {
+    let SpanUser = document.getElementById("yourScore");
+    SpanUser.innerHTML = parseInt(SpanUser.innerHTML) + 1;
+    let Tieelem = document.createElement("span");
+    Tieelem.innerHTML = "You Win!";
+    resultDev.appendChild(Tieelem);
+  }
 }
 function display(userChoice, computerChoice) {
   let gamContainer = [
